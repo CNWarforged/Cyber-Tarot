@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Cyber_Tarot
 {
-    public partial class Form1 : Form
+    public partial class frmBasicReading : Form
     {
-        public Form1()
+        public frmBasicReading()
         {
             InitializeComponent();
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            if (comboBox1.Text == "Past/Present/Future") 
+            if (comboBox1.Text == "Past/Present/Future")
             {
                 navigation.navigateForms("basic");
             }

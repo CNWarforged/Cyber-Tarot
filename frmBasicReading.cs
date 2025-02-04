@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace Cyber_Tarot
 {
@@ -23,6 +24,22 @@ namespace Cyber_Tarot
             {
                 navigation.navigateForms("basic");
             }
+        }
+
+        private void frmBasicReading_Load(object sender, EventArgs e)
+        {
+
+
+            int key = 7;
+            var tarotCard = new TarotCard();
+            tarotCard = dbAccess.ReadDB(key);
+
+            MessageBox.Show(tarotCard.Name);
+
+            lblPastName.Text = tarotCard.Name;
+            tBoxPast.Text = tarotCard.ShortDescription;
+
+
         }
     }
 }
